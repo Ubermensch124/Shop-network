@@ -1,0 +1,6 @@
+cd C:\"Козлов Марк"\Микси
+$count = 0
+$x = dir
+foreach ($i in $x){if ($i -like "Магазин *"){$count = $count + 1}}
+for ($i = 1; $i -le $count; $i++){Copy-Item -Path C:\"Козлов Марк"\Микси\"Магазин $i"\Микси.in -Destination C:\"Козлов Марк"\Микси\Анализ\"Магазин$i"_Микси.in; Copy-Item -Path C:\"Козлов Марк"\Микси\"Магазин $i"\Микси.out -Destination C:\"Козлов Марк"\Микси\Анализ\"Магазин$i"_Микси.out}
+
